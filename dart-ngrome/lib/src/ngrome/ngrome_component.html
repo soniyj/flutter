@@ -1,0 +1,14 @@
+<div>
+  <!-- AngularDart Material -->
+  <material-input label="Label" type="text" [(ngModel)]="my_model"></material-input>
+
+  <br>
+  <material-button (click)="pressed()">press</material-button>
+
+  <br>
+  <material-input [innerHTML]="my_model"></material-input>
+
+  <!-- HTML5 -->
+  <br>
+  <p [innerHTML]="my_model"></p>
+</div>
