@@ -18,7 +18,8 @@ import 'ngrome_service.dart';
   directives: [
     MaterialInputComponent,
     MaterialButtonComponent,
-    materialInputDirectives //NgModel
+    materialInputDirectives, //NgModel,
+    NgIf
   ],
   providers: [ClassProvider(NgRomeService)]
 )
@@ -27,14 +28,22 @@ class NgRomeComponent {
   // Injection Reference
   final NgRomeService ngRomeService;
 
-  String my_model = '';
+  bool toShow = false;
+  String myModel = '';
+  String myName = '';
 
   NgRomeComponent(this.ngRomeService);
 
   pressed() {
-    this.ngRomeService.setString(this.my_model);
+    this.ngRomeService.setString(this.myModel);
     print(this.ngRomeService.getString());
-    this.my_model = 'You are ' + this.my_model;
+    this.myModel = 'You are ' + this.myModel;
+    this.ngRomeService.setString(this.myModel);
+    //console.log(this.ngrome.getString());
+    if (this.myModel.length > 0) {
+      this.toShow = true;
+      this.myName = 'You are ' + this.ngRomeService.getString();
+    }
   }
 
 }

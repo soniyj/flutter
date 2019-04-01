@@ -1,14 +1,16 @@
 <div>
+
   <!-- AngularDart Material -->
-  <material-input label="Label" type="text" [(ngModel)]="my_model"></material-input>
+  <material-input label="Enter your name" type="text" [(ngModel)]="myModel"></material-input>
 
   <br>
   <material-button (click)="pressed()">press</material-button>
 
   <br>
-  <material-input [innerHTML]="my_model"></material-input>
+  <material-input [innerHTML]="myModel"></material-input>
 
   <!-- HTML5 -->
   <br>
-  <p [innerHTML]="my_model"></p>
+  <p *ngIf="toShow" [innerHTML]="myModel"></p>
+
 </div>

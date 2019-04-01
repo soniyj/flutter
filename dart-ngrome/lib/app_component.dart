@@ -10,8 +10,11 @@ import 'src/ngrome/ngrome_component.dart';
   selector: 'my-app',
   styleUrls: ['app_component.css'],
   templateUrl: 'app_component.html',
-  //directives: [TodoListComponent],
-  directives: [NgRomeComponent],
+  directives: [
+    coreDirectives,
+    NgRomeComponent,
+    TodoListComponent
+  ],
 )
 class AppComponent {
   // Nothing here yet. All logic is in TodoListComponent.
