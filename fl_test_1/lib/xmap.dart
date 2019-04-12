@@ -1,10 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import 'package:latlong/latlong.dart';
-
-import 'package:map_native/map_native.dart';
-
 import 'package:flutter_map/flutter_map.dart';
+import 'package:geolocator/geolocator.dart';
 
 class PageWidget extends StatelessWidget {
   @override
@@ -28,11 +28,31 @@ class PageWidget extends StatelessWidget {
 class MapFlutterWidgetNew extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // return Scaffold(
+    //   appBar: AppBar(
+    //     title: Text("Map"),
+    //   ),
+    //   body: MapFlutterWidget(),
+    // );
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Map"),
+      body: Stack(
+        children: <Widget>[
+          Container(
+            // color: Colors.blue,
+            child: MapFlutterWidget(),
+          ),
+          Positioned(
+            top: 0.0,
+            left: 0.0,
+            right: 0.0,
+            child: AppBar(title: Text('Hello world'),
+              // backgroundColor: Colors.green,
+              backgroundColor: Colors.transparent,
+              // elevation: 0.0,
+            ),
+          ),
+        ],
       ),
-      body: MapFlutterWidget(),
     );
   }
 }
@@ -69,64 +89,5 @@ class MapFlutterWidget extends StatelessWidget {
         ),
       ],
     );
-  }
-}
-
-class MapNativeWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final inline0 = new Card(
-        child: new Stack(
-      children: [
-        new MapView(
-            initialLocation: const LatLong(35.68, 51.41),
-            inititialZoom: 9.0),
-        new Align(
-            alignment: Alignment.bottomRight,
-            child: new Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: new FloatingActionButton(
-                    backgroundColor: Colors.white,
-                    onPressed: () {},
-                    child: new Icon(Icons.my_location, color: Colors.purple))))
-      ],
-    ));
-
-    final inline1 = new Card(
-        child: new Stack(
-      children: [
-        new MapView(
-            initialLocation: const LatLong(48.8566, 2.3522),
-            inititialZoom: 9.0),
-        new Align(
-            alignment: Alignment.bottomRight,
-            child: new Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: new FloatingActionButton(
-                    backgroundColor: Colors.white,
-                    onPressed: () {},
-                    child: new Icon(Icons.my_location, color: Colors.purple))))
-      ],
-    ));
-
-    return new MaterialApp(
-        title: 'MapView Demo',
-        theme: new ThemeData(
-          primarySwatch: Colors.purple,
-        ),
-        home: new Scaffold(
-            appBar: new AppBar(
-              title: const Text("MapView Demo"),
-            ),
-            body: new Column(children: [
-              new Padding(
-                  padding: const EdgeInsets.all(4.0),
-                  child:
-                      new AspectRatio(child: inline0, aspectRatio: 16.0 / 9.0)),
-              new Padding(
-                  padding: const EdgeInsets.all(4.0),
-                  child:
-                      new AspectRatio(child: inline1, aspectRatio: 16.0 / 9.0)),
-            ])));
   }
 }
