@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import 'member.dart';
-import 'strings.dart';
-
-import 'xmap.dart';
+import './member.dart';
+import './strings.dart';
+import './xmap.dart';
+import './geocoding.dart';
 
 class MWidget extends StatefulWidget {
   @override
@@ -14,6 +14,7 @@ class MWidget extends StatefulWidget {
 }
 
 class MWidgetState extends State<MWidget> {
+  
   // var _members = [];
   var _members = <Member>[];
   final _biggerFont = const TextStyle(fontSize: 18.0);
@@ -80,6 +81,7 @@ class MWidgetState extends State<MWidget> {
             context,
             // MaterialPageRoute(builder: (context) => MapWidget())
             MaterialPageRoute(builder: (context) => MapFlutterWidgetNew())
+            // MaterialPageRoute(builder: (context) => CurrentLocationWidget())
           );
         },
       ),
