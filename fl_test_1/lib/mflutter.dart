@@ -77,13 +77,13 @@ class MWidgetState extends State<MWidget> {
         ),
         onTap: () {
           print('Pressed');
-          Navigator.push(
-            context,
-            // MaterialPageRoute(builder: (context) => MapWidget())
-            // MaterialPageRoute(builder: (context) => MapFlutterWidgetNew())
-            // MaterialPageRoute(builder: (context) => CurrentLocationWidget())
-            MaterialPageRoute(builder: (context) => GetLocationPage())
-          );
+          // Navigator.push(
+          //   context,
+          //   // MaterialPageRoute(builder: (context) => MapWidget())
+          //   // MaterialPageRoute(builder: (context) => MapFlutterWidgetNew())
+          //   MaterialPageRoute(builder: (context) => CurrentLocationWidget())
+          //   // MaterialPageRoute(builder: (context) => GetLocationPage())
+          // );
         },
       ),
     );
