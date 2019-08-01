@@ -27,3 +27,8 @@ To run this image in a container:
 ```
 docker run -i -t dart/app
 ```
+
+To run this image in a container listening on port `3000`:
+```
+docker run -d -p 3000:3000 -t dart/app
+```
