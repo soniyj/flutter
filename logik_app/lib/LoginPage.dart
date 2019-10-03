@@ -3,6 +3,8 @@ import 'helpers/Constants.dart';
 
 class LoginPage extends StatelessWidget {
 
+  static String tag = 'login-page';
+
   @override
   Widget build(BuildContext context) {
     

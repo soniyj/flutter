@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:arkit_plugin/arkit_plugin.dart';
 import 'package:vector_math/vector_math_64.dart';
 
-class ArkitPage extends StatefulWidget {
+class ShperePage extends StatefulWidget {
+  
+  static String tag = 'shpere-page';
+
   @override
-  _ArkitPageState createState() => _ArkitPageState();
+  _ShperePageState createState() => _ShperePageState();
 }
 
-class _ArkitPageState extends State<ArkitPage> {
+class _ShperePageState extends State<ShperePage> {
   ARKitController arkitController;
 
   @override

@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'helpers/Constants.dart';
 import 'LoginPage.dart';
-import 'ArkitPage.dart';
+import './Arkit/SpherePage.dart';
+import './Arkit/ImagePage.dart'
 
 void main() => runApp(LogikApp());
 
 class LogikApp extends StatelessWidget {
 
   final routes = <String, WidgetBuilder> {
-    'loginPageTag': (context) => LoginPage(),
-    'arkitPageTag': (context) => ArkitPage(),
+    LoginPage.tag: (context) => LoginPage(),
+    ShperePage.tag: (context) => ShperePage(),
+    ImageDetectionPage.tag: (context) => ImageDetectionPage(),
   };
 
   @override
@@ -21,7 +23,7 @@ class LogikApp extends StatelessWidget {
         primaryColor: appDarkGreyColor,
       ),
       //home: LoginPage(),
-      home: ArkitPage(),
+      home: ShperePage(),
       routes: routes,
     );
   }
