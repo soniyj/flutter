@@ -9,6 +9,9 @@ import './xmap.dart';
 import './geocoding.dart';
 
 class MWidget extends StatefulWidget {
+
+  static String tag = 'MWidget';
+
   @override
   createState () => MWidgetState();
 }
