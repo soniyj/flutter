@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'helpers/Constants.dart';
 import 'LoginPage.dart';
 import './Arkit/SpherePage.dart';
-import './Arkit/ImagePage.dart'
+import './Arkit/ImagePage.dart';
 
 void main() => runApp(LogikApp());
 
@@ -23,7 +23,8 @@ class LogikApp extends StatelessWidget {
         primaryColor: appDarkGreyColor,
       ),
       //home: LoginPage(),
-      home: ShperePage(),
+      // home: ShperePage(),
+      home: ImageDetectionPage(),
       routes: routes,
     );
   }
