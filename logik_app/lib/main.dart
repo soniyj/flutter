@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'helpers/Constants.dart';
 import 'LoginPage.dart';
+import 'HomePage.dart';
 import './Arkit/SpherePage.dart';
 import './Arkit/ImagePage.dart';
 
@@ -10,6 +11,7 @@ class LogikApp extends StatelessWidget {
 
   final routes = <String, WidgetBuilder> {
     LoginPage.tag: (context) => LoginPage(),
+    HomePage.tag: (context) => HomePage(),
     ShperePage.tag: (context) => ShperePage(),
     ImageDetectionPage.tag: (context) => ImageDetectionPage(),
   };
@@ -22,7 +24,8 @@ class LogikApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: appDarkGreyColor,
       ),
-      //home: LoginPage(),
+      // home: LoginPage(),
+      // home: HomePage(),
       // home: ShperePage(),
       home: ImageDetectionPage(),
       routes: routes,
