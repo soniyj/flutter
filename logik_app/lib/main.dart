@@ -24,10 +24,10 @@ class LogikApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: appDarkGreyColor,
       ),
-      // home: LoginPage(),
+      home: LoginPage(),
       // home: HomePage(),
       // home: ShperePage(),
-      home: ImageDetectionPage(),
+      // home: ImageDetectionPage(),
       routes: routes,
     );
   }
