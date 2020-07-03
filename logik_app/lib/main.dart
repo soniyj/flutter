@@ -4,6 +4,7 @@ import 'LoginPage.dart';
 import 'HomePage.dart';
 import './Arkit/SpherePage.dart';
 import './Arkit/ImagePage.dart';
+import 'package:logik_app/evja/EvjaPage.dart';
 
 void main() => runApp(LogikApp());
 
@@ -14,6 +15,7 @@ class LogikApp extends StatelessWidget {
     HomePage.tag: (context) => HomePage(),
     ShperePage.tag: (context) => ShperePage(),
     ImageDetectionPage.tag: (context) => ImageDetectionPage(),
+    EvjaPage.tag: (context) => EvjaPage(),
   };
 
   @override
@@ -24,10 +26,11 @@ class LogikApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: appDarkGreyColor,
       ),
-      home: LoginPage(),
+      // home: LoginPage(),
       // home: HomePage(),
       // home: ShperePage(),
       // home: ImageDetectionPage(),
+      home: EvjaPage(),
       routes: routes,
     );
   }
