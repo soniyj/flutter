@@ -1,3 +1,4 @@
 name: dart_angel
 dependencies:
     angel_framework: ^2.0.0
+    ftpconnect: ^0.2.1
